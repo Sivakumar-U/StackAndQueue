@@ -19,4 +19,19 @@ public class TestQueue {
 		Assert.assertEquals(myFirstNode, peak);
 	}
 
+	// UC4
+	@Test
+	public void given3Numbers_DeletedFromQueue() {
+		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
+		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
+		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
+		Queue<Integer> queue = new Queue<Integer>();
+		queue.enqueue(myFirstNode);
+		queue.enqueue(mySecondNode);
+		queue.enqueue(myThirdNode);
+		INode<Integer> delete = queue.dequeue();
+		INode peak = queue.peek();
+		Assert.assertEquals(myFirstNode, delete);
+	}
+
 }
