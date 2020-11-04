@@ -16,4 +16,12 @@ public class StackOperations<K> {
 		return myLinkedList.head;
 	}
 
+	public INode pop() {
+		return myLinkedList.pop();
+	}
+
+	public boolean isEmpty() {
+		return myLinkedList.isEmpty();
+	}
+
 }
