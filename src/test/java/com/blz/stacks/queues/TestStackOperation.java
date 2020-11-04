@@ -19,4 +19,20 @@ public class TestStackOperation {
 		Assert.assertEquals(myThirdNode, peek);
 	}
 
+	@Test
+	public void givenThreeNumbers_DeleteUsingPop() {
+		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
+		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
+		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
+		StackOperations<Integer> stack = new StackOperations<Integer>();
+		stack.push(myFirstNode);
+		stack.push(mySecondNode);
+		stack.push(myThirdNode);
+		INode pop = null;
+		while (!stack.isEmpty()) {
+			pop = stack.pop();
+		}
+		Assert.assertEquals(myFirstNode, pop);
+	}
+
 }
