@@ -105,4 +105,12 @@ public class MyLinkedList<K> {
 		return size;
 	}
 
+	public boolean isEmpty() {
+		if (this.head == null)
+			return true;
+		else
+			return false;
+
+	}
+
 }
